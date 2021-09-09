@@ -1,0 +1,19 @@
+.close-btn {
+    position: absolute;
+    right: 8px;
+}
+
+.close-btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#login-form {
+    margin: 4px 0 4px 0;
+    width: 90%;
+    height: 100%;
+}
+
+.form-message {
+    color: red;
+}

@@ -1,0 +1,26 @@
+.video-category-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-category-title {
+    margin: 120px auto auto auto;
+}
+
+.video-category-container {
+    position: relative;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.video-category-container a {
+    text-decoration: none;
+}
+
+.add-video-btn {
+    width: 150px;
+}

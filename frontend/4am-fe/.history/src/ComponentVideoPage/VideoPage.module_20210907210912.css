@@ -1,0 +1,9 @@
+.video-category-container {
+    margin-top: 120px;
+}
+
+.video-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

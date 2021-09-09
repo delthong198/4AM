@@ -1,0 +1,29 @@
+.video-category-container {
+    margin-top: 120px;
+}
+
+.video-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.video-category-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    overflow-wrap: break-word;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.video-category-item-img {
+    height: 400px;
+    width: 400px;
+}
+
+.video-category-item-body {
+    width: 400px !important;
+    height: 600px;
+}

@@ -1,0 +1,40 @@
+.video-category-container {
+    margin-top: 120px;
+    width: 100%;
+}
+
+.video-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.video-category-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 16px;
+    overflow-wrap: break-word;
+    width: 402px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.video-category-item:hover {
+    zoom: 1.1;
+    cursor: pointer;
+}
+
+.video-category-item-img {
+    height: 400px;
+    width: 400px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.video-category-item-body {
+    width: 400px !important;
+    height: 600px;
+    padding: 10px 10px;
+}

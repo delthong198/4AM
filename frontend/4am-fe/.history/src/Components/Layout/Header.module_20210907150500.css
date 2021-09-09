@@ -1,0 +1,33 @@
+.header-container {
+    display: flex;
+    height: 102px;
+    justify-content: center;
+    background-color: #262626;
+    color: #a5a5a5;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    text-shadow: #000000 0px 0px 1px;
+}
+
+.header-content {
+    display: flex;
+}
+
+.header-img {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+.header-main_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.header-nav-list {
+    list-style-type: none;
+
+}
