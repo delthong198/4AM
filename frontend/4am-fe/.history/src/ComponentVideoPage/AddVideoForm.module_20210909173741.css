@@ -1,0 +1,23 @@
+.add-video-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    top: 12px;
+    position: absolute;
+    right: 20px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.upload-btn {
+    width: 120px;
+}
+
+.form-message {
+    color: red;
+}

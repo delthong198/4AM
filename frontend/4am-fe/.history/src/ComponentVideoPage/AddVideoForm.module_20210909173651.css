@@ -1,0 +1,18 @@
+.add-video-form {
+    border: 1px solid black;
+}
+
+.close-btn {
+    top: 12px;
+    position: absolute;
+    right: 20px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.form-message {
+    color: red;
+}
