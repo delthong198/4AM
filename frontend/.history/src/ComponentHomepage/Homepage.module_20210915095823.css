@@ -1,0 +1,19 @@
+.about-us-title {
+    margin-top: 16px;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.about-us-sub-title {
+    text-align: center;
+}
+
+.about-us-end-paragraph {
+    width: 100%;
+    text-align: right;
+}

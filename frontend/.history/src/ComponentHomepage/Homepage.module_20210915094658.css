@@ -1,0 +1,9 @@
+.about-us-title {
+    margin-top: 8px;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}

@@ -1,0 +1,29 @@
+.blog-category-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-category-title {
+    margin: 120px auto auto auto;
+}
+
+.blog-category-container {
+    position: relative;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.blog-category-container a {
+    text-decoration: none;
+}
+
+.create-btn {
+    position: relative;
+    width: 150px;
+    margin: 0 0 auto auto;
+    right: -200px;
+}

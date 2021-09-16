@@ -1,0 +1,30 @@
+.about-us-title {
+    margin-top: 40px;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.about-us-sub-title {
+    text-align: center;
+}
+
+.about-us-paragraph:first-of-type {
+    margin-top: 24px;
+}
+
+.about-us-paragraph {
+    margin-top: 8px;
+    text-align: justify;
+}
+
+
+
+.about-us-end-paragraph {
+    width: 100%;
+    text-align: right;
+}

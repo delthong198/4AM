@@ -1,0 +1,11 @@
+.editor {
+    position: relative;
+    margin: 8px auto auto auto;
+    width: 50vh;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.create-blog-heading {
+    margin-top: 120px;
+}

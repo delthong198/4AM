@@ -1,0 +1,19 @@
+.editor {
+    position: relative;
+    margin: 8px auto 24px auto;
+    width: 50vw;
+    height: 700px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.create-blog-heading {
+    margin-top: 120px;
+
+}
+
+-webkit-scrollbar-thumb { 
+    border-radius: 10px;
+}
