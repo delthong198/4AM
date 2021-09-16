@@ -1,9 +1,0 @@
-.video-category-container {
-    position: relative;
-    margin-top: 120px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-}
