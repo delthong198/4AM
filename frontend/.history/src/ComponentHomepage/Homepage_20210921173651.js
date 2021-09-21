@@ -31,7 +31,6 @@ const Homepage = (props) => {
                 </p>
 
                 <RecentBlogs />
-                
             </div>
         </Fragment>
     );
