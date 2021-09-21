@@ -56,11 +56,9 @@
 }
 
 .match-pass {
-    font-size: small;
     color: green;
 }
 
 .unmatch-pass {
-    font-size: small;
     color: red;
 }

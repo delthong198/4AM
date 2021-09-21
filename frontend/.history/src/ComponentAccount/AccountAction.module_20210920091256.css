@@ -1,0 +1,23 @@
+.close-btn {
+    top: 12px;
+    position: absolute;
+    right: 20px;
+}
+
+.close-btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.form-message {
+    color: red;
+}
+
+.button {
+    width: 150px;
+    margin-left: 8px;
+}
+
+.button:first-of-type {
+    margin-left: 0px;
+}

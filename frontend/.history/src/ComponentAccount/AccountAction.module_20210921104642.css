@@ -39,10 +39,6 @@
 
 .hide-password-button {
     margin-left: 4px;
-    display: inline-block;
-}
-
-.hide {
     display: none;
 }
 
@@ -53,14 +49,4 @@
 
 .input-form {
     width: 95%;
-}
-
-.match-pass {
-    font-size: small;
-    color: green;
-}
-
-.unmatch-pass {
-    font-size: small;
-    color: red;
 }

@@ -1,6 +1,6 @@
 import { Fragment } from "react/cjs/react.production.min";
 import Slider from "./Slider";
-// import RecentBlogs from "./RecentBlogs";
+import RecentBlogs from "./RecentBlogs";
 import styles from './Homepage.module.css';
 
 const Homepage = (props) => {
@@ -32,7 +32,7 @@ const Homepage = (props) => {
 
 
             </div>
-            {/* <RecentBlogs /> */}
+            <RecentBlogs />
         </Fragment>
     );
 }

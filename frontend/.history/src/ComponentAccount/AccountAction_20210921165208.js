@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 const AccountAction = (props) => {
     const [actionType, setActionType] = useState('login');
+    const [message, setMessage] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [showEvalPassword, setShowEvalPassword] = useState(false);
 
@@ -42,47 +43,14 @@ const AccountAction = (props) => {
         setShowEvalPassword(false);
     }
 
+    const checkMatchedEvalPasswordHandler = (e) => {
+        console.log(e.target.value)
+    }
+
     var newPasswordLength, newPasswordValue;
     const enterPasswordHandler = (e) => {
         newPasswordLength = e.target.value.length;
         newPasswordValue = e.target.value;
-    }
-
-    const checkPassMessage = document.querySelector('.form-message');
-
-    const checkMatchedEvalPasswordHandler = (e) => {
-        var inputPass = e.target.value;
-        for (var i = 0; i < inputPass.length; i++)
-        {
-            if (inputPass[i] === newPasswordValue[i])
-            {
-                if (inputPass.length === newPasswordLength)
-                {
-                    checkPassMessage.textContent = 'Mật khẩu trùng khớp.';
-                    if(checkPassMessage.classList.contains(styles['unmatch-pass']))
-                    {
-                        checkPassMessage.classList.remove(styles['unmatch-pass']);
-                    }
-                    checkPassMessage.classList.add(styles['match-pass']);
-                }
-                else {
-                    checkPassMessage.textContent = 'Mật khẩu khớp nhưng chưa đủ.';
-                    if(checkPassMessage.classList.contains(styles['match-pass']))
-                    {
-                        checkPassMessage.classList.remove(styles['match-pass']);
-                    }
-                    checkPassMessage.classList.add(styles['unmatch-pass']);
-                }
-            }
-            else {
-                checkPassMessage.textContent = 'Mật khẩu không khớp!';
-                if(checkPassMessage.classList.contains(styles['match-pass']))
-                {
-                    checkPassMessage.classList.remove(styles['match-pass']);
-                }
-                checkPassMessage.classList.add(styles['unmatch-pass']);
-            }
-        }
     }
 
 
@@ -98,7 +66,7 @@ const AccountAction = (props) => {
                 <div className="form-group mt-4">
                     <label htmlFor="password">Mật khẩu</label>
                     <div className={styles['enter-password-container']}>
-                        <input type={showPassword ? "text" : "password"} className={inputTagClassName} id="password pass0" name="password" placeholder="Nhập mật khẩu" required onChange={actionType === 'register' ? enterPasswordHandler : ()=>{}}/>
+                        <input type={showPassword ? "text" : "password"} className={inputTagClassName} id="password pass0" name="password" placeholder="Nhập mật khẩu" required onChange={enterPasswordHandler}/>
                         <FaEye className={showPassword ? styles['hide'] : styles['unhide-password-button']} onClick={onShowPasswordHandler}/>
                         <FaEyeSlash className={showPassword ? styles['hide-password-button'] : styles['hide']} onClick={onHidePasswordHandler}/>
                     </div>
@@ -117,7 +85,7 @@ const AccountAction = (props) => {
                 }
 
                 <div className="form-group mt-4">
-                    <p className="form-message"></p>
+                    <label className="form-message">{message}</label>
                 </div>
 
                 <button 

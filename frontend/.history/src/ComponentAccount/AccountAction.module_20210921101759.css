@@ -32,35 +32,15 @@
     align-items: center;
 }
 
-.unhide-password-button {
+.config-password {
     margin-left: 4px;
-    display: inline-block;
 }
 
-.hide-password-button {
-    margin-left: 4px;
-    display: inline-block;
-}
-
-.hide {
-    display: none;
-}
-
-.unhide-password-button:hover,
-.hide-password-button:hover {
+.config-password:hover {
     cursor: pointer;
+    box-shadow: 20px 20px 50px 15px grey;
 }
 
 .input-form {
     width: 95%;
-}
-
-.match-pass {
-    font-size: small;
-    color: green;
-}
-
-.unmatch-pass {
-    font-size: small;
-    color: red;
 }

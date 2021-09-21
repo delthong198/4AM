@@ -98,7 +98,7 @@ const AccountAction = (props) => {
                 <div className="form-group mt-4">
                     <label htmlFor="password">Mật khẩu</label>
                     <div className={styles['enter-password-container']}>
-                        <input type={showPassword ? "text" : "password"} className={inputTagClassName} id="password pass0" name="password" placeholder="Nhập mật khẩu" required onChange={actionType === 'register' ? enterPasswordHandler : ()=>{}}/>
+                        <input type={showPassword ? "text" : "password"} className={inputTagClassName} id="password pass0" name="password" placeholder="Nhập mật khẩu" required onChange={actionType === 'register' && enterPasswordHandler}/>
                         <FaEye className={showPassword ? styles['hide'] : styles['unhide-password-button']} onClick={onShowPasswordHandler}/>
                         <FaEyeSlash className={showPassword ? styles['hide-password-button'] : styles['hide']} onClick={onHidePasswordHandler}/>
                     </div>
@@ -117,7 +117,7 @@ const AccountAction = (props) => {
                 }
 
                 <div className="form-group mt-4">
-                    <p className="form-message"></p>
+                    <label className="form-message"></label>
                 </div>
 
                 <button 
