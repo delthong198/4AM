@@ -8,7 +8,7 @@ using UltimateNeverBug.Models;
 
 namespace UltimateNeverBug.Migrations
 {
-    [DbContext(typeof(EmployeeContext))]
+    [DbContext(typeof(UserContext))]
     partial class EmployeeContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -29,9 +29,6 @@ namespace UltimateNeverBug.Migrations
                     b.Property<string>("Desciprtion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("EmployeeId")
-                        .HasColumnType("bigint");
-
                     b.Property<string>("Picture")
                         .HasColumnType("nvarchar(max)");
 
@@ -41,56 +38,15 @@ namespace UltimateNeverBug.Migrations
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("BlogID");
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
 
-                    b.HasIndex("EmployeeId");
+                    b.HasKey("BlogID");
 
                     b.ToTable("Blogs");
                 });
 
-            modelBuilder.Entity("UltimateNeverBug.Models.Employee", b =>
-                {
-                    b.Property<long>("EmployeeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("EmployeeId");
-
-                    b.ToTable("Employees");
-                });
-
-            modelBuilder.Entity("UltimateNeverBug.Models.EmployeeRole", b =>
-                {
-                    b.Property<long>("EmployeeId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("RoleId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("EmployeeId", "RoleId");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("EmployeeRoles");
-                });
-
-            modelBuilder.Entity("UltimateNeverBug.Models.Roles", b =>
+            modelBuilder.Entity("UltimateNeverBug.Models.Role", b =>
                 {
                     b.Property<long>("RoleId")
                         .ValueGeneratedOnAdd()
@@ -118,15 +74,45 @@ namespace UltimateNeverBug.Migrations
                     b.Property<string>("Descrpitions")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("EmployeeId")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ScheduleId");
 
                     b.ToTable("Schedules");
+                });
+
+            modelBuilder.Entity("UltimateNeverBug.Models.User", b =>
+                {
+                    b.Property<long>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("RoleId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("UltimateNeverBug.Models.Video", b =>
@@ -142,60 +128,18 @@ namespace UltimateNeverBug.Migrations
                     b.Property<string>("Desciprtion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("EmployeeId")
-                        .HasColumnType("bigint");
-
                     b.Property<string>("Titlle")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
                     b.HasKey("VideoId");
 
                     b.ToTable("Videos");
-                });
-
-            modelBuilder.Entity("UltimateNeverBug.Models.Blog", b =>
-                {
-                    b.HasOne("UltimateNeverBug.Models.Employee", "Employee")
-                        .WithMany("Blogs")
-                        .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Employee");
-                });
-
-            modelBuilder.Entity("UltimateNeverBug.Models.EmployeeRole", b =>
-                {
-                    b.HasOne("UltimateNeverBug.Models.Employee", "Employee")
-                        .WithMany("EmployeeRoles")
-                        .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("UltimateNeverBug.Models.Roles", "Roles")
-                        .WithMany("EmployeeRoles")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Employee");
-
-                    b.Navigation("Roles");
-                });
-
-            modelBuilder.Entity("UltimateNeverBug.Models.Employee", b =>
-                {
-                    b.Navigation("Blogs");
-
-                    b.Navigation("EmployeeRoles");
-                });
-
-            modelBuilder.Entity("UltimateNeverBug.Models.Roles", b =>
-                {
-                    b.Navigation("EmployeeRoles");
                 });
 #pragma warning restore 612, 618
         }

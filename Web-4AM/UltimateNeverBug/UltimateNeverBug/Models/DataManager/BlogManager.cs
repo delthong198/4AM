@@ -9,26 +9,26 @@ namespace UltimateNeverBug.Models.DataManager
 {
     public class BlogManager : IDataRepository<Blog>
     {
-        readonly EmployeeContext _EmployeeContext;
-        public BlogManager(EmployeeContext context)
+        readonly UserContext _UserContext;
+        public BlogManager(UserContext context)
         {
-            _EmployeeContext = context;
+            _UserContext = context;
         }
         public IEnumerable<Blog> GetAll()
         {
-            return _EmployeeContext.Blogs
+            return _UserContext.Blogs
                 //.Include (employee =>employee.Employee)
                 .ToList();
         }
         public Blog Get(long id)
         {
-            return _EmployeeContext.Blogs
+            return _UserContext.Blogs
                   .FirstOrDefault(e => e.BlogID == id);
         }
         public void Add(Blog entity)
         {
-            _EmployeeContext.Blogs.Add(entity);
-            _EmployeeContext.SaveChanges();
+            _UserContext.Blogs.Add(entity);
+            _UserContext.SaveChanges();
         }
         public void Update(Blog blog, Blog entity)
         {
@@ -36,12 +36,12 @@ namespace UltimateNeverBug.Models.DataManager
             blog.Desciprtion = entity.Desciprtion;
             blog.Picture = entity.Picture;
             blog.Type = entity.Type;
-            _EmployeeContext.SaveChanges();
+            _UserContext.SaveChanges();
         }
         public void Delete(Blog blog)
         {
-            _EmployeeContext.Blogs.Remove(blog);
-            _EmployeeContext.SaveChanges();
+            _UserContext.Blogs.Remove(blog);
+            _UserContext.SaveChanges();
         }
     }
 }

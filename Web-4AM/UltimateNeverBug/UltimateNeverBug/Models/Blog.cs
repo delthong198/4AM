@@ -14,7 +14,7 @@ namespace UltimateNeverBug.Models
         public string Desciprtion { get; set; }
         public string Picture { get; set; }
         public string Type { get; set; }
-        public long EmployeeId { get; set; }
-        public Employee Employee { get; set; }
+        public long UserId { get; set; }
+        //public User User { get; set; }
     }
 }

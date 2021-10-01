@@ -10,71 +10,71 @@ namespace UltimateNeverBug.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeeController : ControllerBase
+    public class UserController : ControllerBase
     {
-        private readonly IDataRepository<Employee> _dataRepository;
-        public EmployeeController(IDataRepository<Employee> dataRepository)
+        private readonly IDataRepository<User> _dataRepository;
+        public UserController(IDataRepository<User> dataRepository)
         {
             _dataRepository = dataRepository;
         }
-        // GET: api/Employee
+        // GET: api/User
         [HttpGet]
         public IActionResult Get()
         {
-            IEnumerable<Employee> employees = _dataRepository.GetAll();
-            return Ok(employees);
+            IEnumerable<User> Users = _dataRepository.GetAll();
+            return Ok(Users);
         }
-        // GET: api/Employee/5
+        // GET: api/User/5
         [HttpGet("{id}",Name = "Get")]
         public IActionResult Get(long id)
         {
-            Employee employee = _dataRepository.Get(id);
-            if (employee == null)
+            User User = _dataRepository.Get(id);
+            if (User == null)
             {
-                return NotFound("The Employee record couldn't be found.");
+                return NotFound("The User record couldn't be found.");
             }
-            return Ok(employee);
+            return Ok(User);
         }
-        // POST: api/Employee
+        // POST: api/User
         [HttpPost]
-        public IActionResult Post([FromBody] Employee employee)
+        public IActionResult Post([FromBody] User User)
         {
-            if (employee == null)
+            if (User == null)
             {
-                return BadRequest("Employee is null.");
+                return BadRequest("User is null.");
             }
-            _dataRepository.Add(employee);
+            _dataRepository.Add(User);
             return CreatedAtRoute(
                   "Get",
-                  new { Id = employee.EmployeeId },
-                  employee);
+                  new { Id = User.UserId },
+                  User);
         }
-        // PUT: api/Employee/5
+        // PUT: api/User/5
         [HttpPut("{id}")]
-        public IActionResult Put(long id, [FromBody] Employee employee)
+        public IActionResult Put(long id, [FromBody] User User)
         {
-            if (employee == null)
+            if (User == null)
             {
-                return BadRequest("Employee is null.");
+                return BadRequest("User is null.");
             }
-            Employee employeeToUpdate = _dataRepository.Get(id);
-            if (employeeToUpdate == null)
+            User UserToUpdate = _dataRepository.Get(id);
+            if (UserToUpdate == null)
             {
-                return NotFound("The Employee record couldn't be found.");
+                return NotFound("The User record couldn't be found.");
             }
-            _dataRepository.Update(employeeToUpdate, employee);
+            _dataRepository.Update(UserToUpdate, User);
             return NoContent();
         }
-        // DELETE: api/Employee/5
+        // DELETE: api/User/5
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {
-            Employee employee = _dataRepository.Get(id);
-            if (employee == null)
+            User User = _dataRepository.Get(id);
+            if (User == null)
             {
-                return NotFound("The Employee record couldn't be found.");
+                return NotFound("The User record couldn't be found.");
             }
-            _dataRepository.Delete(employee);
+            _dataRepository.Delete(User);
             return NoContent();
         }
     }

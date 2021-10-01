@@ -11,6 +11,6 @@ namespace UltimateNeverBug.Models
         public string Descrpitions { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime EndDate { get; set; }
-        public long EmployeeId { get; set; }
+        public long UserId { get; set; }
     }
 }
