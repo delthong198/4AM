@@ -1,0 +1,65 @@
+.form-container {
+    display: flex;
+    margin-top: 120px;
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.form-group {
+    padding: 16px 16px;
+}
+
+.form-heading {
+    margin-left: 4px;
+    font-size: 24px;
+}
+
+.form-message {
+    color: red;
+}
+
+.form-input {
+    width: 340px;
+    margin-left: 4px;
+}
+
+.enter-password-container {
+    display: flex;
+    width: 357px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+.forgot-password {
+    color: black;
+    font-size: small;
+}
+
+.forgot-password:hover {
+    text-decoration: none;
+}
+.unhide-password-button {
+    margin-left: 4px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.hide-password-button {
+    margin-left: 4px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+}
+
+.unhide-password-button:hover,
+.hide-password-button:hover {
+    cursor: pointer;
+}

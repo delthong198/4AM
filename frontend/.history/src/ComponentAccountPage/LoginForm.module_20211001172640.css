@@ -1,0 +1,35 @@
+.form-container {
+    display: flex;
+    margin-top: 120px;
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.form-group {
+    padding: 16px 16px;
+}
+
+.form-heading {
+    font-size: 24px;
+}
+
+.form-message {
+    color: red;
+}
+
+.form-input {
+    width: 368px;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+.forgot-password {
+    position: relative;
+    right: 0;
+    left: auto;
+    color: black;
+    font-size: small;
+}

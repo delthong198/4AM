@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    margin-top: 16px;
+    bottom: 0;
+    width: 100%;
+    height: 102px;
+    justify-content: space-around;
+    background-color: #262626;
+    color: #eaec59;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: left;
+    text-shadow: #000000 0px 0px 1px;
+    z-index: 1000;;
+}
+
+.footer-item {
+
+}
+
+.footer-description {
+    margin-left: 8px;
+    font-size: 24px;
+    color: #eaec59;
+}
+
+.footer-description:hover {
+    text-decoration: none;
+}

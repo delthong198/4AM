@@ -1,0 +1,27 @@
+.form-container {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.form-group {
+    padding: 16px 16px;
+}
+
+.form-heading {
+    font-size: 24px;
+}
+
+.close-btn {
+    width: 100%;
+}
+
+.close-btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.form-message {
+    color: red;
+}

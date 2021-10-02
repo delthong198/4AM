@@ -1,0 +1,25 @@
+.form-container {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.form-group {
+    padding: 16px 16px;
+}
+
+.close-btn {
+    top: 12px;
+    position: absolute;
+    right: 20px;
+}
+
+.close-btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.form-message {
+    color: red;
+}

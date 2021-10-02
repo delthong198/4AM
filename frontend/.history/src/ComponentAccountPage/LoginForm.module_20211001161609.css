@@ -1,0 +1,21 @@
+.form-container {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    background-color: #262626;
+}
+
+.close-btn {
+    top: 12px;
+    position: absolute;
+    right: 20px;
+}
+
+.close-btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.form-message {
+    color: red;
+}

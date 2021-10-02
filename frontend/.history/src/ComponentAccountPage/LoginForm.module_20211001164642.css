@@ -1,0 +1,28 @@
+.form-container {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.form-group {
+    position: absolute;
+    padding: 16px 16px;
+}
+
+.form-heading {
+    font-size: 24px;
+}
+
+.form-message {
+    color: red;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.submit-btn {
+    width: 100%;
+}

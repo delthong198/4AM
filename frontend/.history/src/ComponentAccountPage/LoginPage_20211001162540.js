@@ -1,0 +1,38 @@
+import React from 'react';
+import styles from './LoginPage.module.css';
+import LoginForm from './LoginForm';
+
+const AccountPage = () => {
+    return (
+        <div  className={styles['account-page']}>
+            <div className={styles['account-page-header']}>
+                <div className={styles['header-content']}>
+                    <div className={styles['header-img-heading']}>
+                        <img src={logo} alt='4AM logo' className={styles['header-img']}/>
+                        <h2 className={styles['header-heading']}>4AM TRAINING</h2>
+                    </div>
+                    <nav className={styles['header-main_nav']}>
+                        <ul className={styles['header-nav-list']}>
+                            <li className={styles['header-nav-list-item']}><Link to="/">Home</Link></li>
+                            <li className={styles['header-nav-list-item']}><Link to="/video-category">Video</Link></li>
+                            <li className={styles['header-nav-list-item']}><Link to="/blog-category">Blog</Link></li>
+                        </ul>
+                    </nav>
+
+                    <div className={styles['header-account-action']}>
+                        <a href="/login">Login</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div className={styles['account-page-body']}>
+                <LoginForm />
+            </div>
+        </div>
+    )
+}
+
+export default AccountPage;
