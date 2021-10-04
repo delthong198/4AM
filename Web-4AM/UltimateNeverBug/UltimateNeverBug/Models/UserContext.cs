@@ -15,11 +15,12 @@ namespace UltimateNeverBug.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Role>().HasKey(s => s.RoleId);
-            //modelBuilder.Entity<UserRole>().HasKey(s =>
-            //   new {
-            //       s.UserId,
-            //       s.RoleId
-            //   });
+            modelBuilder.Entity<UserRole>().HasKey(s =>
+               new
+               {
+                   s.UserId,
+                   s.RoleId
+               });
             /////one-many employee-blog
             //modelBuilder.Entity<Blog>()
             //    .HasOne(s => s.User)
@@ -42,7 +43,7 @@ namespace UltimateNeverBug.Models
 
         public DbSet<User> Users { get; set; }
         public DbSet<Blog> Blogs { get; set; }
-        //public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Video> Videos { get; set; }
         public DbSet<Schedule> Schedules { get; set; }

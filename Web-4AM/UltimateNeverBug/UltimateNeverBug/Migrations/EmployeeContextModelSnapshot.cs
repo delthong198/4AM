@@ -115,6 +115,19 @@ namespace UltimateNeverBug.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("UltimateNeverBug.Models.UserRole", b =>
+                {
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("RoleId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.ToTable("UserRoles");
+                });
+
             modelBuilder.Entity("UltimateNeverBug.Models.Video", b =>
                 {
                     b.Property<long>("VideoId")

@@ -5985,11 +5985,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\4AM\\Web-4AM\\UltimateNeverBug\\UltimateNeverBug\\UltimateNeverBug.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Web-4AM\\UltimateNeverBug\\UltimateNeverBug\\UltimateNeverBug.csproj",
       "projectName": "UltimateNeverBug",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\4AM\\Web-4AM\\UltimateNeverBug\\UltimateNeverBug\\UltimateNeverBug.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\Web-4AM\\UltimateNeverBug\\UltimateNeverBug\\UltimateNeverBug.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\4AM\\Web-4AM\\UltimateNeverBug\\UltimateNeverBug\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\Web-4AM\\UltimateNeverBug\\UltimateNeverBug\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
