@@ -1,0 +1,50 @@
+.homepage {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: max-content;
+}
+
+.about-us-title {
+    position: relative;
+    margin-top: 24px;
+}
+
+.about-us-content {
+    position: relative;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.about-us-sub-title {
+    position: absolute;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.about-us-paragraph:first-of-type {
+    margin-top: 130px;
+}
+
+.about-us-paragraph {
+    margin-top: 8px;
+    text-align: justify;
+}
+
+
+
+.about-us-end-paragraph {
+    width: 100%;
+    text-align: right;
+    font-style: italic;
+}
