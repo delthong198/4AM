@@ -9,7 +9,7 @@ const VideoCategoryPage = (props) => {
     return (
         <div className={styles['video-category-page']}>
             <Header />
-            <div className={styles['video-manager-link']}>
+            <div className={styles['blog-manager-link']}>
                 <Link to="/video-manager">
                     <button type="button" className="btn btn-primary">Quản lý blog</button>
                 </Link>
