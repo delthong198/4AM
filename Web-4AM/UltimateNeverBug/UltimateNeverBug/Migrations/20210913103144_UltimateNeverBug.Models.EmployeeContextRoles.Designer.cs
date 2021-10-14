@@ -9,7 +9,7 @@ using UltimateNeverBug.Models;
 
 namespace UltimateNeverBug.Migrations
 {
-    [DbContext(typeof(UserContext))]
+    [DbContext(typeof(DataContext))]
     [Migration("20210913103144_UltimateNeverBug.Models.EmployeeContextRoles")]
     partial class UltimateNeverBugModelsEmployeeContextRoles
     {

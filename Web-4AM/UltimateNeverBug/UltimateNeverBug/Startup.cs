@@ -29,7 +29,7 @@ namespace UltimateNeverBug
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<UserContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:EmployeeDB"]));
+            services.AddDbContext<DataContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:EmployeeDB"]));
             services.AddScoped<IDataRepository<User>, UserManager>();
             services.AddScoped<IDataRepository<Blog>, BlogManager>();
             services.AddControllers();

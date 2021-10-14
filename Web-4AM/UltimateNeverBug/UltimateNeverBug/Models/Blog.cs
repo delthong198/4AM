@@ -9,9 +9,9 @@ namespace UltimateNeverBug.Models
     public class Blog
     {
         [Key]
-        public long BlogID { get; set; }
+        public long BlogId { get; set; }
         public string Titlle { get; set; }
-        public string Desciprtion { get; set; }
+        public string Description { get; set; }
         public string Picture { get; set; }
         public string Type { get; set; }
         public long UserId { get; set; }

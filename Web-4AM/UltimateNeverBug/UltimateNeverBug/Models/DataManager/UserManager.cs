@@ -9,35 +9,35 @@ namespace UltimateNeverBug.Models.DataManager
 {
     public class UserManager : IDataRepository<User>
     {
-        readonly UserContext _UserContext;
-        public UserManager(UserContext context)
+        readonly DataContext _DataContext;
+        public UserManager(DataContext context)
         {
-            _UserContext = context;
+            _DataContext = context;
         }
         public IEnumerable<User> GetAll()
         {
-            return _UserContext.Users
+            return _DataContext.Users
                 //.Include(blog =>blog.Blogs)
                 //.Include(erole =>erole.UserRoles)
                 .ToList();
         }
         public User Get(long id)
         {
-            var User = _UserContext.Users
+            var User = _DataContext.Users
                   .FirstOrDefault(e => e.UserId == id);
             //if(User == null)
             //{
             //    return null;
             //}
-            //_UserContext.Entry(User)
+            //_DataContext.Entry(User)
             //    .Collection(b => b.Blogs)
             //    .Load();
             return User;
         }
         public void Add(User entity)
         {
-            _UserContext.Users.Add(entity);
-            _UserContext.SaveChanges();
+            _DataContext.Users.Add(entity);
+            _DataContext.SaveChanges();
         }
         public void Update(User User, User entity)
         {
@@ -46,12 +46,12 @@ namespace UltimateNeverBug.Models.DataManager
             User.Email = entity.Email;
             User.DateOfBirth = entity.DateOfBirth;
             User.PhoneNumber = entity.PhoneNumber;
-            _UserContext.SaveChanges();
+            _DataContext.SaveChanges();
         }
         public void Delete(User User)
         {
-            _UserContext.Users.Remove(User);
-            _UserContext.SaveChanges();
+            _DataContext.Users.Remove(User);
+            _DataContext.SaveChanges();
         }
     }
 }

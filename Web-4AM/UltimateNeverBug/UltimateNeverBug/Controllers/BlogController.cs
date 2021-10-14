@@ -47,7 +47,7 @@ namespace UltimateNeverBug.Controllers
             _dataRepository.Add(blog);
             return CreatedAtRoute(
                   "Get",
-                  new { Id = blog.BlogID },
+                  new { Id = blog.BlogId },
                   blog);
         }
         // PUT: api/Blog/5

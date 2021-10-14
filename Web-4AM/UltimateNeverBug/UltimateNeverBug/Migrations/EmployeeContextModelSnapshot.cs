@@ -8,7 +8,7 @@ using UltimateNeverBug.Models;
 
 namespace UltimateNeverBug.Migrations
 {
-    [DbContext(typeof(UserContext))]
+    [DbContext(typeof(DataContext))]
     partial class EmployeeContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -21,12 +21,12 @@ namespace UltimateNeverBug.Migrations
 
             modelBuilder.Entity("UltimateNeverBug.Models.Blog", b =>
                 {
-                    b.Property<long>("BlogID")
+                    b.Property<long>("BlogId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Desciprtion")
+                    b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Picture")
@@ -41,7 +41,7 @@ namespace UltimateNeverBug.Migrations
                     b.Property<long>("UserId")
                         .HasColumnType("bigint");
 
-                    b.HasKey("BlogID");
+                    b.HasKey("BlogId");
 
                     b.ToTable("Blogs");
                 });
@@ -71,7 +71,7 @@ namespace UltimateNeverBug.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Descrpitions")
+                    b.Property<string>("Descrpition")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("EndDate")
@@ -138,7 +138,10 @@ namespace UltimateNeverBug.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Desciprtion")
+                    b.Property<string>("Descrpition")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SourceId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Titlle")
