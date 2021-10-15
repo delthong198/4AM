@@ -32,6 +32,7 @@ namespace UltimateNeverBug
             services.AddDbContext<DataContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:EmployeeDB"]));
             services.AddScoped<IDataRepository<User>, UserManager>();
             services.AddScoped<IDataRepository<Blog>, BlogManager>();
+            services.AddScoped<IDataRepository<Video>, VideoManager>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
