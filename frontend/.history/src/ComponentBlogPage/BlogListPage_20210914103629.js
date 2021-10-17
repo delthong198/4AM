@@ -35,6 +35,8 @@ const calisthenicBlog = [
 ]
 
 const BlogListPage = (props) => {
+    const createBtnClassName = `${styles['create-btn']} `
+
     var blogSource;
     if (props.blogType === 'basketball') {
         blogSource = basketballBlog;

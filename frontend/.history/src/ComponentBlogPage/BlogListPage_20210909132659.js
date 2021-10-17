@@ -51,7 +51,7 @@ const BlogListPage = (props) => {
                 key={blog.id}
                 thumnailSource={blog.thumnailSource}
                 title={blog.title}
-                content={blog.content}
+                content={blog.description}
                 blogType={props.blogType}
                 blogID={blog.blogID}
             />
@@ -61,11 +61,6 @@ const BlogListPage = (props) => {
     return (
         <div className={styles['blog-category-page']}>
             <h2 className={styles['blog-category-title']}>{props.blogType==='basketball' ? 'Basketball Blogs' : 'Calisthenic Blogs'}</h2>
-            <form className={styles['create-blog-form']} action={`/blog-category/${props.blogType}/create-new`}>
-                <button type="submit" className="btn btn-primary">
-                    Tạo blog
-                </button>
-            </form>
             <div className={styles['blog-category-container']}>
                 {blogList}
             </div>

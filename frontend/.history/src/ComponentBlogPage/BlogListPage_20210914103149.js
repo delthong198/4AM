@@ -35,6 +35,8 @@ const calisthenicBlog = [
 ]
 
 const BlogListPage = (props) => {
+    const createBtnClassName = `${styles['create-btn']} btn btn-primary`
+
     var blogSource;
     if (props.blogType === 'basketball') {
         blogSource = basketballBlog;
@@ -61,11 +63,7 @@ const BlogListPage = (props) => {
     return (
         <div className={styles['blog-category-page']}>
             <h2 className={styles['blog-category-title']}>{props.blogType==='basketball' ? 'Basketball Blogs' : 'Calisthenic Blogs'}</h2>
-            <form className={styles['create-blog-form']} action={`/blog-category/${props.blogType}/create-new`}>
-                <button type="submit" className="btn btn-primary">
-                    Tạo blog
-                </button>
-            </form>
+            <button type="button" className={createBtnClassName} href={`/blog-category/${props.blogType}/create-new`}>Tạo blog</button>
             <div className={styles['blog-category-container']}>
                 {blogList}
             </div>
