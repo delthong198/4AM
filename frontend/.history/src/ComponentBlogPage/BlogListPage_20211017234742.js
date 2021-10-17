@@ -1,5 +1,7 @@
 import BlogItem from "./BlogItem";
 import styles from './BlogListPage.module.css';
+import Header from '../Components/Layout/Header';
+import Footer from '../Components/Layout/Footer';
 
 const basketballBlog = [{
     id: 1,
@@ -60,10 +62,17 @@ const BlogListPage = (props) => {
 
     return (
         <div className={styles['blog-category-page']}>
+            <Header />
             <h2 className={styles['blog-category-title']}>{props.blogType==='basketball' ? 'Basketball Blogs' : 'Calisthenic Blogs'}</h2>
+            <form className={styles['create-blog-form']} action={`/blog-category/${props.blogType}/create-new`}>
+                <button type="submit" className="btn btn-primary">
+                    Tạo blog
+                </button>
+            </form>
             <div className={styles['blog-category-container']}>
                 {blogList}
             </div>
+            <Footer option='blogListPage-footer'/>
         </div>
     );
 }
