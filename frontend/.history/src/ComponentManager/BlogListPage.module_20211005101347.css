@@ -1,0 +1,39 @@
+.blog-category-page {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.blog-category-title {
+    position: relative;
+    margin: 120px auto 0px auto;
+}
+
+.blog-category-container {
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+}
+
+.blog-category-container a {
+    text-decoration: none;
+}
+
+.create-blog-form {
+    position: relative;
+    width: 150px;
+    margin: 0 0 auto auto;
+    right: 0;
+}

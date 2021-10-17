@@ -1,0 +1,38 @@
+.video-category-page {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: max-content;
+}
+
+.video-category-title {
+    margin: 12px auto 0px auto;
+}
+
+.video-category-container {
+    position: absolute;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.video-category-container a {
+    text-decoration: none;
+}
+
+.add-video-btn {
+    position: absolute;
+    width: 150px;
+    margin: 0 24px auto auto;
+    right: 0;
+}
