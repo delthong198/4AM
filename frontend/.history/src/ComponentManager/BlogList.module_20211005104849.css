@@ -1,0 +1,25 @@
+.blog-list {
+    position: relative;
+    margin-bottom: 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.blog-category-container {
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+}
+
+.blog-category-container a {
+    text-decoration: none;
+}
