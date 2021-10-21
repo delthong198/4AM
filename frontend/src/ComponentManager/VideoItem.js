@@ -3,22 +3,22 @@ import styles from './VideoItem.module.css';
 import swal from 'sweetalert';
 
 const showDeleteForm = () => {
-  swal({
-      title: "Bạn chắc chứ?",
-      text: "Một khi đã xóa, bạn sẽ không thể khôi phục được video!",
-      icon: "warning",
-      buttons: ['Hủy', true],
-      dangerMode: true,
-    })
-    .then((willDelete) => {
-      if (willDelete) {
-        swal("Bạn đã xóa thành công!", {
-          icon: "success",
-        });
-      } else {
-        swal("Video vẫn được giữ lại trong hệ thống!");
-      }
-    });
+    swal({
+        title: "Bạn chắc chứ?",
+        text: "Một khi đã xóa, bạn sẽ không thể khôi phục được video!",
+        icon: "warning",
+        buttons: ['Hủy', true],
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("Bạn đã xóa thành công!", {
+            icon: "success",
+          });
+        } else {
+          swal("Video vẫn được giữ lại trong hệ thống!");
+        }
+      });
 }
 
 const VideoItem = (props) => {

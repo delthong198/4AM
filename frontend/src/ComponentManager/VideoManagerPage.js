@@ -5,6 +5,7 @@ import Header from '../Components/Layout/Header';
 import Footer from '../Components/Layout/Footer';
 
 const VideoManagerPage = () => {
+
     return (
         <div className={styles['video-manager-page']}>
             <Header />
