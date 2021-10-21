@@ -3,7 +3,6 @@ import styles from './BlogItem.module.css';
 import swal from 'sweetalert';
 
 function BlogItem(props) {
-
     const showDeleteForm = () => {
         swal({
             title: "Bạn chắc chứ?",
