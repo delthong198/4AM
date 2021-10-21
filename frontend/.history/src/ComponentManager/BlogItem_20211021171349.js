@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 import styles from './BlogItem.module.css';
-import swal from 'sweetalert';
 
 function BlogItem(props) {
 
     const showDeleteForm = () => {
         swal({
             title: "Bạn chắc chứ?",
-            text: "Một khi đã xóa, bạn sẽ không thể khôi phục được bài viết!",
+            text: "Một khi đã xóa, bạn sẽ không thể khôi phục được video!",
             icon: "warning",
             buttons: ['Hủy', true],
             dangerMode: true,
@@ -18,7 +17,7 @@ function BlogItem(props) {
                 icon: "success",
               });
             } else {
-              swal("Bài viết vẫn được giữ lại trong hệ thống!");
+              swal("Video vẫn được giữ lại trong hệ thống!");
             }
           });
     }

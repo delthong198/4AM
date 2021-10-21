@@ -7,7 +7,7 @@ const showDeleteForm = () => {
         title: "Bạn chắc chứ?",
         text: "Một khi đã xóa, bạn sẽ không thể khôi phục được video!",
         icon: "warning",
-        buttons: ['Hủy', true],
+        buttons: true,
         dangerMode: true,
       })
       .then((willDelete) => {

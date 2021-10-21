@@ -1,8 +1,9 @@
 import VideoList from './VideoList';
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './VideoManagerPage.module.css';
 import Header from '../Components/Layout/Header';
 import Footer from '../Components/Layout/Footer';
+import ConfirmDeleteForm from '../Components/Layout/ConfirmDeleteForm';
 
 const VideoManagerPage = () => {
 

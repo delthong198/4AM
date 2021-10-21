@@ -58,12 +58,16 @@ const LinkDefine = (props) => {
             <Route path="/video-category/basketball">
             <VideoListPage 
                 videoType='basketball'
+                isShownAddVideoForm={props.showAddVideoForm}
+                onShowAddVideoForm={props.onShowAddVideoForm}
             />
             </Route>
 
             <Route path="/video-category/calisthenic">
             <VideoListPage 
                 videoType='calisthenic'
+                isShownAddVideoForm={props.showAddVideoForm}
+                onShowAddVideoForm={props.onShowAddVideoForm} 
             />
             </Route>
 

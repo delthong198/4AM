@@ -1,13 +1,15 @@
 import VideoList from './VideoList';
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './VideoManagerPage.module.css';
 import Header from '../Components/Layout/Header';
 import Footer from '../Components/Layout/Footer';
+import ConfirmDeleteForm from '../Components/Layout/ConfirmDeleteForm';
 
 const VideoManagerPage = () => {
 
     return (
         <div className={styles['video-manager-page']}>
+            {showDeleteForm && <ConfirmDeleteForm onHideDeleteForm={onHideDeleteForm}/>}
             <Header />
             <h2 className={styles['video-manager-title']}>Trang quản lý video</h2>
             <form className={styles['create-video-form']} action={`/video-list/add-new`}>

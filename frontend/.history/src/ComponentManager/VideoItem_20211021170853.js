@@ -4,19 +4,19 @@ import swal from 'sweetalert';
 
 const showDeleteForm = () => {
     swal({
-        title: "Bạn chắc chứ?",
-        text: "Một khi đã xóa, bạn sẽ không thể khôi phục được video!",
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
         icon: "warning",
-        buttons: ['Hủy', true],
+        buttons: true,
         dangerMode: true,
       })
       .then((willDelete) => {
         if (willDelete) {
-          swal("Bạn đã xóa thành công!", {
+          swal("Poof! Your imaginary file has been deleted!", {
             icon: "success",
           });
         } else {
-          swal("Video vẫn được giữ lại trong hệ thống!");
+          swal("Your imaginary file is safe!");
         }
       });
 }

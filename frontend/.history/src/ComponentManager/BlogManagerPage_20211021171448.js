@@ -9,7 +9,7 @@ const BlogManager = () => {
         <div className={styles['blog-manager-page']}>
             <Header />
             <h2 className={styles['blog-manager-title']}>Trang quản lý bài viết</h2>
-            <form className={styles['create-blog-form']} action={`/blog-list/create-new`}>
+            <form className={styles['create-blog-form']} action={`/blog-category/create-new`}>
                 <button type="submit" className="btn btn-primary">
                     Tạo blog
                 </button>
