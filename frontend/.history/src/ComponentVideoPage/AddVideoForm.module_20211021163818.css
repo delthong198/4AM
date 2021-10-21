@@ -1,0 +1,38 @@
+.add-video-page {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: max-content;
+}
+
+.add-video-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    top: 12px;
+    position: absolute;
+    right: 20px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.upload-btn {
+    width: 120px;
+    margin: auto 0 auto auto;
+}
+
+.form-message {
+    color: red;
+}

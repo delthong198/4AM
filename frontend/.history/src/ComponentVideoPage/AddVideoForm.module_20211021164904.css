@@ -1,0 +1,50 @@
+.add-video-page {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+}
+
+.form-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    background-color: white;
+    border-radius: 5px;
+    width: 50%;
+    height: 100%;
+}
+
+.form-group {
+    width: 100%;
+    padding: 16px 16px;
+}
+
+.add-video-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    top: 12px;
+    position: absolute;
+    right: 20px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.upload-btn {
+    width: 120px;
+    margin: auto 0 auto auto;
+}
+
+.form-message {
+    color: red;
+}
