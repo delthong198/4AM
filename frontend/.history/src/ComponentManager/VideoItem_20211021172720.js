@@ -2,26 +2,27 @@ import { Link } from 'react-router-dom';
 import styles from './VideoItem.module.css';
 import swal from 'sweetalert';
 
+const showDeleteForm = () => {
+  swal({
+      title: "Bạn chắc chứ?",
+      text: "Một khi đã xóa, bạn sẽ không thể khôi phục được video!",
+      icon: "warning",
+      buttons: ['Hủy', true],
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Bạn đã xóa thành công!", {
+          icon: "success",
+        });
+      } else {
+        swal("Video vẫn được giữ lại trong hệ thống!");
+      }
+    });
+}
+
 const VideoItem = (props) => {
-  const showDeleteForm = () => {
-    swal({
-        title: "Bạn chắc chứ?",
-        text: "Một khi đã xóa, bạn sẽ không thể khôi phục được video!",
-        icon: "warning",
-        buttons: ['Hủy', true],
-        dangerMode: true,
-      })
-      .then((willDelete) => {
-        if (willDelete) {
-          swal("Bạn đã xóa thành công!", {
-            icon: "success",
-          });
-        } else {
-          swal("Video vẫn được giữ lại trong hệ thống!");
-        }
-      });
-  }
-  return (
+    return (
         <div className={styles['video-container']}>
             <Link to={`/video-category/${props.videoType}/${props.videoID}`}>
                 <img className={styles['video-container-thumnail']} src={props.thumnailSource} alt="Video thumnail"/>

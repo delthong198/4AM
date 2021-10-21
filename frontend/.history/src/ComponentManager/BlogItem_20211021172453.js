@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from './BlogItem.module.css';
 import swal from 'sweetalert';
 
-const BlogItem = (props) => {
-
+function BlogItem(props) {
     const showDeleteForm = () => {
         swal({
             title: "Bạn chắc chứ?",
