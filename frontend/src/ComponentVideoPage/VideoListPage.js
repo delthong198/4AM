@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from '../Components/Layout/Header';
 import Footer from '../Components/Layout/Footer';
 import VideoItem from "./VideoItem";
 import styles from './VideoListPage.module.css';
+import useHTTP from "../Hook/use-https";
 
 const basketballVideo = [{
     id: 1,
@@ -38,9 +39,8 @@ const calisthenicVideo = [
 ]
 
 const VideoListPage = (props) => {
-    const addVideoBtnClassName = `${styles['add-video-btn']} btn btn-success`;
     const videoListPageClassName = `.${styles['video-category-page']}`;
-
+    const [videoData, setVideoData] = useState([]);
     useEffect(()=>{
         if(props.isShownAddVideoForm) {
             document.querySelector(videoListPageClassName).style.marginTop='87px';
@@ -51,6 +51,14 @@ const VideoListPage = (props) => {
     }, [props.isShownAddVideoForm, videoListPageClassName])
 
     var videoSource;
+    const sendRequest = useHTTP();
+
+    useEffect(() => {
+        sendRequest('https://fouram-website-2b563-default-rtdb.asia-southeast1.firebasedatabase.app/videos.json', props.videoType, (data) => {
+            setVideoData(data);
+        });
+    }, [])
+
     if (props.videoType === 'basketball') {
         videoSource = basketballVideo;
     }
@@ -58,10 +66,11 @@ const VideoListPage = (props) => {
         videoSource = calisthenicVideo;
     }
 
+    console.log(videoData)
     var videoList;
 
     if (videoSource) {
-        videoList = videoSource.map(video => 
+        videoList = videoData.map(video => 
             <VideoItem
                 key={video.id}
                 thumnailSource={video.thumnailSource}
